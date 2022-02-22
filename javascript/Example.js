@@ -8,6 +8,7 @@
 
 // var Person = {
 //     firstName : 'Subrotho',
+//     middleName: String,
 //     lastName : 'Samantha',
 //     age : 23,
 //     profession : 'Software Engineer',
@@ -16,9 +17,39 @@
 //         state:'Telangana'
 //     },
 //     bornYear: function(){
-//         return new Date().getFullYear() - this.age;
+//         return new Date().getFullYear()-1 - this.age;
 //     }
 // };
+
+// let student = Person;
+// student.middleName = 'Mangal';
+// console.log(student.bornYear());
+
+/*Defining class*/
+
+const Employee={
+   firstName: String,
+   middleName: String,
+   lastName: String,
+   age: Number,
+   salary : Number,
+   Address:{
+       city:String,
+       state:String
+   },
+   role:String
+
+   
+};
+
+let emp1 = Employee;
+emp1.firstName = "subhankar";
+emp1.Address.city = "Hyderabad";
+emp1.Address ={city="Hyderabad",state="Telangana"};
+document.write(emp1.firstName);
+document.write(emp1.Address.city);
+document.write(emp1.Address.state);
+
 
 // let student = Person;
 // student.living.city = 'Kolkata';

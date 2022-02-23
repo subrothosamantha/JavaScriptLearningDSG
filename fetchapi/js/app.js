@@ -29,18 +29,13 @@ function LoadJson(){
   });
 }
 
+//using arrow function
 
-function LoadFetchApi(){
-  fetch('https://jsonplaceholder.typicode.com/posts').then(function(response){
-    return response.json();
-  }).then(function(data){
+LoadFetchApi => {
+  fetch('https://jsonplaceholder.typicode.com/posts').then(response =>  response.json())
+    .then(data => {
      let html = '';
-     data.forEach(function(post){
-      html += `
-      <li>${post.id}</li>
-      <li>${post.title}</li>
-     `
-     });
+     data.forEach(post =>  html += `<li>${post.id}</li> <li>${post.title}</li>`);
      document.getElementById('result').innerHTML = html;
   });
 }

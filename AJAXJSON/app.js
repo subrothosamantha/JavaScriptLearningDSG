@@ -18,14 +18,16 @@ function loadpostreqeust(){
 
      const xhr = new XMLHttpRequest();
 
-     xhr.open('POST','http://dummy.restapiexample.com/api/v1/create',true);
-     xhr.getResponseHeader('content-type','application/json')
+     xhr.open('GET','https://mocki.io/v1/873418d9-894c-4621-bfb8-191997c336d2',true);
+     //xhr.getResponseHeader('content-type','application/json')
 
      xhr.onload = function(){
-
+         if(this.status === 200){
+              console.log(this.responseText);
+         }
      }
-     param = '{"name":"testcase","salary":"123","age":"23"}';
-     xhr.send(param);
+    // param = `{"id":144,"name":"krishna","age":44}`;
+     xhr.send();
 }
 
 
@@ -36,7 +38,8 @@ function loadEmployee() {
 
    //connection creation
    xhr.open('GET','employee.json',false);
-
+//if async is false then it blocks code what is written after this only
+//after fully execution of this code it opens for next lines
 
    xhr.onload = function(){
         if(this.status === 200){

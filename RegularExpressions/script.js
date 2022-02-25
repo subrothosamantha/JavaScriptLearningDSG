@@ -25,3 +25,5 @@ let result4 = s.search(reg);
 
 let result5 = s.replace(reg,'subroto');
 console.log(result5)
+
+
